@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,700');
+body {
+    overflow-x: hidden;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #505962;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-purple {
+    border-color: #8366B0;
+    background-color: #8366B0;
+    color: white;
+    margin: 1rem;
+}
+
+.btn-purple:hover,
+.btn-purple:focus {
+    border-color: #594781;
+    background-color: #594781;
+    color: white;
+}
+
+.feature img {
+    padding: 1.5rem;
+}
+
+footer {
+    background-color: #40474e;
+    background-size: cover;
+    color: white;
+}
+
+footer .row {
+    padding: 1.5rem 0 4rem;
+    line-height: 2rem;
+}
+
+footer img {
+    margin: 1.5rem 0;
+}
+
+footer h3 {
+    margin: 1.5rem 0;
+}
+
+
+/*-- Extra Bootstrap Column Padding --*/
+
+[class*="col-"] {
+    padding: 1rem;
+}
