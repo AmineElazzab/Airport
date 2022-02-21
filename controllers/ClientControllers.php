@@ -44,7 +44,7 @@ class ClientControllers{
   
             if($result==='ok'){
               session::set('success','Client Ajouté avec success');
-              Redirect::to('client');
+              Redirect::to('reservation/vols');
             }else{
                 echo $result;
             }

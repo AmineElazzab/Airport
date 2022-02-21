@@ -23,7 +23,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<title>Responsive Bootstrap Theme</title>
 <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" >
     <!-- JavaScript Bundle with Popper -->
@@ -34,7 +33,7 @@
 	<!--- Navigation -->
 	<nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="index.php"><img src="img/IL MEGLIO.png"></a> 
+			<a class="navbar-brand" href="index.php"><img src="img/IL MEGLIO.PNG"></a> 
             <!-- <button class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button> -->
 			<!-- <div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
@@ -83,6 +82,16 @@
     </div> -->
   </div>
 
+  
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
   <div class="carousel-caption justify-content-center bg-dark px-3  ">
                 <form method="post" action="index/vols">
                 <div>
@@ -97,7 +106,7 @@
 </div>
 
 </div>
-                    <div class="row py-2">
+                    <div class="row py-">
                         <div class="col"><input type="text" name="search" class="form-control" placeholder="ville-départ" aria-label="Username" aria-describedby="basic-addon1"></div>
                         <div class="col"><input type="text" name="search1" class="form-control" placeholder="ville-arrivée" aria-label="Username" aria-describedby="basic-addon1"></div>
                         <div class="col"><input type="date" name="search2" class="form-control" placeholder="date-départ" aria-label="Username" aria-describedby="basic-addon1"></div>
@@ -109,15 +118,6 @@
 
                 </form>
             </div>
-
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
 
 	<!--- End Image Slider -->
@@ -128,7 +128,7 @@
 			<div class="col-10 py-5">
 				<h2>Voyagez en toute sécurité avec nous</h2>
 				<p class="lead">Tout au long de la crise du COVID-19, vous pouvez compter sur nous pour voyager en toute sécurité.</p>
-                <a class="btn btn-purple btn-lg" href="./views/client/client.php">Login | Signup</a>
+                <a class="btn btn-purple btn-lg" href="client/login">Login | Signup</a>
 			</div>
 		</div>
 	</div>

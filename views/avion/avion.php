@@ -11,16 +11,36 @@ if (isset($_POST['find'])) {
 
 ?>
 <body id="body-pd">
-    <header class="header bg-dark" id="header">
+<!-- <header class="header bg-dark" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
         <div class="bg-light">  <?php  echo $_SESSION['nom']."    ".$_SESSION['prenom'];?> </div>
-    </header>
-    <div class="l-navbar" id="nav-bar">
-        <nav class="nav">
-            <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name"> <img src="../ass/img/IL MEGLIO2.png"></span> </a>
-                <div class="nav_list"> <a href="<?php echo BASE_URL; ?>" class="nav_link "> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">HOME</span> </a> <a href="<?php echo BASE_URL; ?>pilote/pilote" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Pilote</span> </a> <a href="<?php echo BASE_URL; ?>avion/avion" class="nav_link active"> <i class='bx bxs-paper-plane'></i> <span class="nav_name">Avion</span> </a> <a href="<?php echo BASE_URL; ?>client/client" class="nav_link "> <i class='bx bxs-user-rectangle'></i> <span class="nav_name">Client</span> </a> <a href="<?php echo BASE_URL; ?>vols/vols" class="nav_link"> <i class='bx bxs-plane'></i> <span class="nav_name">Vols</span> </a> <a href="<?php echo BASE_URL; ?>reservation/reservation" class="nav_link"> <i class='bx bx-book-reader'></i> <span class="nav_name">Réservation</span> </a>  </div>
-            </div> <a href="<?php echo BASE_URL; ?>logout/logout" title="Déconnexion" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
-        </nav>
+    </header> -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <!-- <a class="navbar-brand" href="#"><h1>IL MEGLIO.</h1></a> -->
+  <a class="navbar-brand"><img src="../img/IL MEGLIO.PNG"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+    <ul class="nav nav-tabs">
+      <li class="nav-item active">
+      <a class="nav-link active" aria-current="page" href="#"><p class="text-warning">Avion</p></a>
+      </li>
+      <li class="nav-item">
+      <a href="<?php echo BASE_URL; ?>client/client" class="nav-link"><p class="text-warning">Client</p></a>
+      </li>
+      <li class="nav-item X"  >
+      <a href="<?php echo BASE_URL; ?>vols/vols" class="nav-link"><p class="text-warning">Vols</p></a>
+      </li>
+      <li class="nav-item">
+      <a href="<?php echo BASE_URL; ?>reservation/reservation" class="nav-link"><p class="text-warning">Réservation</p></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+            <!-- </div> <a href="<?php echo BASE_URL; ?>logout/logout" title="Déconnexion" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a> -->
+        
     </div>
 
 
@@ -28,7 +48,7 @@ if (isset($_POST['find'])) {
 
         <div class="container py-5">
         <h1> Avion </h1>
-            <div class="row my-4">
+            <div class="row my-5">
                 <div class=" col-md-10 mx-auto">
                <?php include('./views/includes/alert.php'); ?> 
                     <div class="card">
