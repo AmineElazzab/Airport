@@ -21,6 +21,7 @@ class LoginControllers{
                      $_SESSION['nom']=$result->nom;
                      $_SESSION['prenom']=$result->prenom;
                      $_SESSION['id_client']=$result->id_client;
+                     $_SESSION['role']=0;
                      Redirect::to('../reservation/vols');
                 
             }
@@ -32,7 +33,10 @@ class LoginControllers{
                 $_SESSION['cin']=$resultAdmin->cin;
                 $_SESSION['nom']=$resultAdmin->nom;
                 $_SESSION['prenom']=$resultAdmin->prenom;
+                $_SESSION['role']=1;
                 Redirect::to('../avion/avion');
+                // Redirect::to('../avion/Dashboard');
+
               
            
             } 

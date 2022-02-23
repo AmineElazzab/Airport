@@ -7,7 +7,7 @@ class LoginModels{
         $cin=$data['cin'];
         
         try{
-           $query='select * from client where cin=:cin';
+           $query='SELECT * FROM client WHERE cin=:cin';
            $stmt=DB::connect()->prepare($query);
            $stmt->execute((array(":cin"=>$cin)));
            $client=$stmt->fetch(PDO::FETCH_OBJ);
@@ -33,7 +33,7 @@ class LoginModels{
         $passwords=$data1['passwords'];
         
         try{
-           $query='select * from admin where cin=:cin and passwords=:passwords';
+           $query='SELECT * FROM admin WHERE cin=:cin AND passwords=:passwords';
            $stmt=DB::connect()->prepare($query);
            $stmt->execute((array(":cin"=>$cin,":passwords"=>$passwords)));
            $admin=$stmt->fetch(PDO::FETCH_OBJ);

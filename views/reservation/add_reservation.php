@@ -1,4 +1,11 @@
 <?php
+
+if($_SESSION['role']==1){
+    header("Location: http://localhost/me/airport/");
+
+}
+
+
 if (isset($_POST['id_vols'])) {
     $exitvols= new VolsControllers();
     $vols = $exitvols->getOneVols();

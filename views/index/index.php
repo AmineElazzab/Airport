@@ -164,16 +164,16 @@
 	<!--- End Jumbotron -->
 
 	<!--- Two Column Section -->
-	<!-- <div class="container py-3">
+	<div class="container py-3">
 		<div class="row justify-content-center py-5">
 			<div class="col-lg-6">
-				<h3 class="pb-4">Learn to build Bootstrap websites</h3>
-				<p>The columns will automatically stack on top of each other when the screen is less than 992px wide.</p>
-				<p>Resize the browser window to see the effect. Responsive web design has become more important as the amount of mobile traffic now accounts for more than half of total internet traffic.</p><a class="btn btn-purple btn-lg" href="#">Bootstrap Course</a>
+				<h3 class="pb-4">Enjoy flexible travel opportunities</h3>
+				<p>As the world returns to normal, you can safely plan new trips with your flexible travel rights. You are always prepared for changes in your plans with our zero-change fee and change-to-open ticket rights.</p>
+				<p>Adittional health measures have been instituted at all stages of your new flights. Discover our new applications, designed to enable you to travel safely.</p>
 			</div>
-			<div class="col-lg-6"><img class="img-fluid" src="img/responsive.png"></div>
+			<div class="col-lg-6"><img class="img-fluid" src="img/h2.jpg"></div>
 		</div>
-	</div> -->
+	</div>
 	<!--- End Two Column Section -->
 
 <!--- Script Source Files -->

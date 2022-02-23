@@ -27,7 +27,7 @@ if((isset($_POST['inlineRadioOptions2']) && (isset($_POST['find'])))){
 
 ?>
 
-<body>
+<body class="bg-dark">
 
 
 
@@ -36,20 +36,20 @@ if((isset($_POST['inlineRadioOptions2']) && (isset($_POST['find'])))){
 
         </div>
         <div class="row ">
-            <div class="col-sm ">
+            <div class="col-sm  ">
                 <section>
-                    <table class="table table-hover">
+                    <table class="table table-dark table-striped">
                         <thead>
                             <tr>
-                                <th scope="col">Date_D</th>
-                                <th scope="col">Date_A</th>
-                                <th scope="col">VD</th>
-                                <th scope="col">VA</th>
-                                <th scope="col">AD</th>
-                                <th scope="col">AR</th>
-                                <th scope="col">HD</th>
-                                <th scope="col">HA</th>
-                                <th scope="col">Prix_vol</th>
+                                <th scope="col" class="p-3 mb-2 bg-warning text-dark">Date_D</th>
+                                <th scope="col" class="p-3 mb-2 bg-secondary text-white">Date_A</th>
+                                <th scope="col" class="p-3 mb-2 bg-warning text-dark">VD</th>
+                                <th scope="col" class="p-3 mb-2 bg-secondary text-white">VA</th>
+                                <th scope="col" class="p-3 mb-2 bg-warning text-dark">AD</th>
+                                <th scope="col" class="p-3 mb-2 bg-secondary text-white">AR</th>
+                                <th scope="col" class="p-3 mb-2 bg-warning text-dark">HD</th>
+                                <th scope="col" class="p-3 mb-2 bg-secondary text-white">HA</th>
+                                <th scope="col" class="p-3 mb-2 bg-warning text-dark">Prix_vol</th>
 
 
 
@@ -60,7 +60,7 @@ if((isset($_POST['inlineRadioOptions2']) && (isset($_POST['find'])))){
                             <?php foreach ($vols as $vols) { ?>
                                 <tr>
 
-                                    <td><?php echo ($vols['date_depart']); ?></td>
+                                    <td ><?php echo ($vols['date_depart']); ?></td>
                                     <td><?php echo ($vols['date_arrivee']); ?></th>
                                     <td><?php echo ($vols['ville_depart']); ?></td>
                                     <td><?php echo ($vols['ville_arrivee']); ?></td>
@@ -79,7 +79,7 @@ if((isset($_POST['inlineRadioOptions2']) && (isset($_POST['find'])))){
         </div>
     </div>
     <div>
-        <h3 class="text-center text-white pt-5"><img src="../ass/img/IL MEGLIO2.png"></h3>
+        <h3 class="text-center text-white pt-5"><img src="../img/IL MEGLIO.png"></h3>
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-6">
@@ -87,7 +87,7 @@ if((isset($_POST['inlineRadioOptions2']) && (isset($_POST['find'])))){
                         <form method="post" class="mx-0">
                             <div class="row p-5 ">
 
-                                <input type="submit" name="submit" class="btn btn-info btn-lg" value="Reserver">
+                                <input type="submit" name="submit" class="btn btn-warning btn-lg" value="Reserver">
 
 
                             </div>

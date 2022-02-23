@@ -1,5 +1,10 @@
 <?php
 
+if($_SESSION['role']==1){
+  header("Location: http://localhost/me/airport/");
+
+}
+
 if (isset($_POST['id_reservation'])) {
     $data = new ReservationControllers();
     $reservation = $data->imprimer();

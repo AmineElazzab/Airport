@@ -10,7 +10,7 @@ require_once './views/includes/alert.php';
 
 $home=new HomeController();
 
-$pages=['index/index','index/vols','avion/avion','avion/update','avion/add','avion/delete','client/delete','client/client','client/update','client/add','client/login','vols/vols','vols/update','vols/add','vols/delete','reservation/vols','reservation/reserver','reservation/add_reservation','reservation/reservation','reservation/delete','logout/logout','reservation/imprimer'];
+$pages=['index/index','index/vols','avion/avion','avion/Dashboard','avion/update','avion/add','avion/delete','client/delete','client/client','client/update','client/add','client/login','vols/vols','vols/update','vols/add','vols/delete','reservation/vols','reservation/reserver','reservation/add_reservation','reservation/reservation','reservation/delete','logout/logout','reservation/imprimer'];
 
 //Indique si une valeur appartient à un tableau
 

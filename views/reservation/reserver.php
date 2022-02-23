@@ -1,5 +1,11 @@
 <?php
 
+if($_SESSION['role']==1){
+    header("Location: http://localhost/me/airport/");
+
+}
+
+
 if (isset($_POST['find'])) {
     $data = new ReservationControllers();
     $reservation = $data->findReservation();
@@ -11,17 +17,29 @@ if (isset($_POST['find'])) {
 
 ?>
 
-<body id="body-pd">
-    <header class="header bg-dark" id="header">
-        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <div class="bg-light"> <?php echo $_SESSION['nom'] . "    " . $_SESSION['prenom']; ?> </div>
-    </header>
-    <div class="l-navbar" id="nav-bar">
-        <nav class="nav">
-            <div> <a href="<?php echo BASE_URL; ?>" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name"> <img src="../ass/img/IL MEGLIO2.png"></span> </a>
-                <div class="nav_list"> <a href="<?php echo BASE_URL; ?>" class="nav_link "> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">HOME</span> </a> <a href="<?php echo BASE_URL; ?>reservation/reserver" class="nav_link active"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Reservation</span> </a> <a href="<?php echo BASE_URL; ?>reservation/vols" class="nav_link"> <i class='bx bxs-plane'></i><span class="nav_name">vols</span> </a> </div>
-            </div> <a href="<?php echo BASE_URL; ?>logout/logout" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
-        </nav>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <!-- <a class="navbar-brand" href="#"><h1>IL MEGLIO.</h1></a> -->
+  <a class="navbar-brand"><img src="../img/IL MEGLIO.PNG"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+    <ul class="nav nav-tabs">
+      <li class="nav-item active">
+      <a href="<?php echo BASE_URL; ?>reservation/vols" class="nav-link"><p class="text-warning">Vols</p></a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="<?php echo BASE_URL; ?>reservation/reserver" class="nav-link"><p class="text-warning">Réservation</p></a>
+      </li>
+      </ul>
+  </div>
+      <div class="text-light">  <?php  echo $_SESSION['nom']."    ".$_SESSION['prenom'] ;?> </div>
+  <a href="<?php echo BASE_URL; ?>logout/logout" title="Déconnexion">SignOut</a>
+</nav>
+           
+        
     </div>
 
 
@@ -35,7 +53,7 @@ if (isset($_POST['find'])) {
                     <div class=" car-body  bg-light p-4">
                         <form class="float-end d-flex flex-row" method="post">
                             <input type="text" name="search" placeholder="search">
-                            <button class="btn btn-info btn-sm" name="find">
+                            <button class="btn btn-warning btn-sm" name="find">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                 </svg>
@@ -67,7 +85,7 @@ if (isset($_POST['find'])) {
 
 
 
-                                        <td class="d-flex flex-row ">
+                                        <!-- <td class="d-flex flex-row ">
 
                                             <form method="post" class="mx-4" action="imprimer">
 
@@ -78,7 +96,7 @@ if (isset($_POST['find'])) {
 
 
 
-                                        </td>
+                                        </td> -->
 
                                     </tr>
 

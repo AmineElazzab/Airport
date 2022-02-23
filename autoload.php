@@ -1,7 +1,7 @@
-
 <?php
 
 session_start();
+// require_once './bootstrap.php';
 spl_autoload_register('autoload');//Enregistre une fonction en tant qu'implémentation de __autoload()
 require_once './bootstrap.php';//vérifie si le fichier a déjà été inclus
 function autoload($class_name){

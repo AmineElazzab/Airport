@@ -1,4 +1,10 @@
- <?php   ?>                    
+<?php
+if($_SESSION['role']==0){
+    header("Location: http://localhost/me/airport/");
+
+}
+?>
+
 <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 <div id="page-wrapper" class="container">
   <div class="row">

@@ -4,7 +4,7 @@
 			<div class="row text-center py-5">
 				<div class="col-md-4">
 					<img src="img/IL MEGLIO.PNG">
-					<p>At our core is a collection of design and development solutions that represent everything your business needs to compete in the modern marketplace.</p>
+					<p>Demandez un surclassement ou un accès aux salons, économisez jusqu'à 20% lorsque vous achetez des bagages supplémentaires ou bénéficiez du service Meet & Assist pour rendre votre voyage encore plus mémorable.</p>
 				</div> 
 				<div class="col-md-4">
 					<h3 class="text-center">CONTACT INFO</h3><strong>Contact Info</strong>

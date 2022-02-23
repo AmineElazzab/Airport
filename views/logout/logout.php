@@ -6,4 +6,4 @@
     $logoutuser->logout();
     unset($_SESSION["nom"]);
     unset($_SESSION["prenom"]);
-    Redirect::to('../client/login');
+    Redirect::to('http://localhost/me/airport/');
