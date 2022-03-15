@@ -20,7 +20,7 @@ if (isset($_POST['find'])) {
 }
 
 ?>
-<body id="body-pd">
+<body class="img js-fullheight" style="background-image: url(../images/bg.jpg);">
     <!-- <header class="header bg-dark" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
         <div class="bg-light">  <?php  echo $_SESSION['nom']."    ".$_SESSION['prenom'];?> </div>
@@ -97,6 +97,7 @@ if (isset($_POST['find'])) {
                                         <th scope="col">HD</th>
                                         <th scope="col">HA</th>
                                         <th scope="col">P_vol</th>
+                                        <th scope="col">seats</th>
                                         <th scope="col">id_avion</th>
         
 
@@ -116,6 +117,7 @@ if (isset($_POST['find'])) {
                                         <td><?php echo ($vols['heure_depart']); ?></td>
                                         <td><?php echo ($vols['heure_arrivee']); ?></th>
                                         <td><?php echo ($vols['prix_vol']); ?></td>
+                                        <td><?php echo ($vols['available_seats']); ?></td>
                                         <td><?php echo ($vols['id_avion']); ?></td>
 
                                         

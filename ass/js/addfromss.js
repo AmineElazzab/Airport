@@ -4,6 +4,8 @@ document.querySelector("#nbr_passager").addEventListener('input', function() {
     var nbr = document.querySelector("#nbr_passager").value;
     // var clientx = document.querySelector("#id_client").value;
 
+    //delete div childs #passager 
+
     for (i = 0; i < nbr; i++) {
         //console.log(nbr);
         var div = document.createElement("div");
@@ -20,9 +22,6 @@ document.querySelector("#nbr_passager").addEventListener('input', function() {
                             <input type="text" name="${prenom}" id="${prenom}" class="form-control">
                             <label for="${date_naissance}" class="mb-2">Date de naissance </label>
                             <input type="date" name="${date_naissance}" id="${date_naissance}" class="form-control">
-                           
-                          
-
 
                         </div>`
 
@@ -30,8 +29,3 @@ document.querySelector("#nbr_passager").addEventListener('input', function() {
     }
 
 });
-
-{
-    /* <label for="${id_client1}" class="mb-2">id_client</label>
-    <input type="date" name="${id_client1}" id="${id_client1}" class="form-control"> */
-}

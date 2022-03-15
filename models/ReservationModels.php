@@ -4,7 +4,7 @@ class ReservationModels{
  
     static public function getRes() {
 
-        $stmt = DB::connect()->prepare('SELECT * from reservation,client,vols where reservation.id_client=client.id_client and reservation.id_vols=vols.id_vols and client.id_client='.$_SESSION['id_client']);
+        $stmt = DB::connect()->prepare('SELECT * FROM reservation,client,vols WHERE reservation.id_client=client.id_client AND reservation.id_vols=vols.id_vols AND client.id_client='.$_SESSION['id_client']);
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->null;
@@ -13,7 +13,7 @@ class ReservationModels{
 
      static public function getAll() {
 
-      $stmt = DB::connect()->prepare('SELECT * from reservation,client,vols where reservation.id_client=client.id_client and reservation.id_vols=vols.id_vols');
+      $stmt = DB::connect()->prepare('SELECT * FROM reservation,client,vols WHERE reservation.id_client=client.id_client AND reservation.id_vols=vols.id_vols');
       $stmt->execute();
       return $stmt->fetchAll();
       $stmt->null;
@@ -108,7 +108,7 @@ class ReservationModels{
       
     static public function imprimer($data) {
       $id_reservation=$data['id_reservation'];
-      $stmt = DB::connect()->prepare('SELECT * from reservation,client,vols,passager,pilote,avion where pilote.id_pilote=vols.id_pilote and avion.id_avion=vols.id_vols and reservation.id_client=client.id_client and reservation.id_vols=vols.id_vols and passager.id_client=client.id_client and reservation.id_reservation='.$id_reservation);
+      $stmt = DB::connect()->prepare('SELECT * from reservation,client,vols,passager,avion where avion.id_avion=vols.id_vols and reservation.id_client=client.id_client and reservation.id_vols=vols.id_vols and passager.id_client=client.id_client and reservation.id_reservation='.$id_reservation);
       $stmt->execute();
       $passager=$stmt->fetch(PDO::FETCH_OBJ);
       return $passager;

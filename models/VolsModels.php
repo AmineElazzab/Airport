@@ -4,11 +4,23 @@ class VolsModels{
 
      static public function getAll() {
 
-        $stmt = DB::connect()->prepare('SELECT * from vols');
-        $stmt->execute();
-        return $stmt->fetchAll();
-        $stmt->null;
-
+      //   $stmt = DB::connect()->prepare('SELECT * from vols');
+      //   $stmt->execute();
+      //   return $stmt->fetchAll();
+      //   $stmt->null;
+      try {
+         $query = 'SELECT avion_vols.*,
+                      avion_vols.seats
+                       -
+                      (SELECT count(*) FROM reservation
+                                        WHERE reservation.id_vols = avion_vols.id_vols) as available_seats FROM avion_vols';
+         $stmt = DB::connect()->prepare($query);
+         if ($stmt->execute()) {
+             return $stmt->fetchAll();
+         }
+     } catch (PDOException $ex) {
+         echo 'error' . $ex->getMessage();
+     }
      }
 
      static public function searchVols ($data){
@@ -32,7 +44,7 @@ class VolsModels{
 
 
    static public function add ($data){
-      $stmt=DB::connect()->prepare('INSERT INTO vols (date_depart,date_arrivee,ville_depart,ville_arrivee,airoport_depart,airoport_arrivee,heure_depart,heure_arrivee,prix_vol,id_pilote,id_avion) VALUES (:date_depart,:date_arrivee,:ville_depart,:ville_arrivee,:airoport_depart,:airoport_arrivee,:heure_depart,:heure_arrivee,:prix_vol,:id_pilote,:id_avion)');
+      $stmt=DB::connect()->prepare('INSERT INTO vols (date_depart,date_arrivee,ville_depart,ville_arrivee,airoport_depart,airoport_arrivee,heure_depart,heure_arrivee,prix_vol,seats,id_avion) VALUES (:date_depart,:date_arrivee,:ville_depart,:ville_arrivee,:airoport_depart,:airoport_arrivee,:heure_depart,:heure_arrivee,:prix_vol,:seats,:id_avion)');
       $stmt->bindParam(':date_depart',$data['date_depart']);
       $stmt->bindParam(':date_arrivee',$data['date_arrivee']);
       $stmt->bindParam(':ville_depart',$data['ville_depart']);
@@ -42,7 +54,7 @@ class VolsModels{
       $stmt->bindParam(':heure_depart',$data['heure_depart']);
       $stmt->bindParam(':heure_arrivee',$data['heure_arrivee']);
       $stmt->bindParam(':prix_vol',$data['prix_vol']);
-      $stmt->bindParam(':id_pilote',$data['id_pilote']);
+      $stmt->bindParam(':seats',$data['seats']);
       $stmt->bindParam(':id_avion',$data['id_avion']);
       if($stmt->execute()){
        return 'ok';
@@ -70,7 +82,7 @@ class VolsModels{
    }
 
    static public function update ($data){
-      $stmt=DB::connect()->prepare('update  vols set date_depart=:date_depart ,date_arrivee=:date_arrivee ,ville_depart=:ville_depart,ville_arrivee=:ville_arrivee ,airoport_depart=:airoport_depart ,airoport_arrivee=:airoport_arrivee,heure_depart=:heure_depart ,heure_arrivee=:heure_arrivee ,prix_vol=:prix_vol,id_pilote=:id_pilote ,id_avion=:id_avion where id_vols=:id_vols');
+      $stmt=DB::connect()->prepare('update  vols set date_depart=:date_depart ,date_arrivee=:date_arrivee ,ville_depart=:ville_depart,ville_arrivee=:ville_arrivee ,airoport_depart=:airoport_depart ,airoport_arrivee=:airoport_arrivee,heure_depart=:heure_depart ,heure_arrivee=:heure_arrivee ,prix_vol=:prix_vol,seats=:seats,id_avion=:id_avion where id_vols=:id_vols');
       $stmt->bindParam(':id_vols',$data['id_vols']);
       $stmt->bindParam(':date_depart',$data['date_depart']);
       $stmt->bindParam(':date_arrivee',$data['date_arrivee']);
@@ -81,8 +93,8 @@ class VolsModels{
       $stmt->bindParam(':heure_depart',$data['heure_depart']);
       $stmt->bindParam(':heure_arrivee',$data['heure_arrivee']);
       $stmt->bindParam(':prix_vol',$data['prix_vol']);
-      
-
+      $stmt->bindParam(':seats',$data['seats']);
+      $stmt->bindParam(':id_avion',$data['id_avion']);
       if($stmt->execute()){
        return 'ok';
     }else{

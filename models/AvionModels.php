@@ -4,7 +4,7 @@ class AvionModels{
 
      static public function getAll() {
 
-        $stmt = DB::connect()->prepare('SELECT * from avion');
+        $stmt = DB::connect()->prepare('SELECT * FROM avion');
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->null;
@@ -16,7 +16,7 @@ class AvionModels{
       $search=$data['search'];
       /*die (print_r($data));*/
       try{
-         $query='select* from avion where marque like ?  OR capacite like ?';
+         $query='SELECT* FROM avion WHERE marque LIKE ?  OR capacite LIKE ?';
          $stmt=DB::connect()->prepare($query);
          $stmt->execute((array('%'.$search.'%', '%'.$search.'%')));
          $avion=$stmt->fetchAll();
@@ -32,10 +32,10 @@ class AvionModels{
 
 
    static public function add ($data){
-      $stmt=DB::connect()->prepare('INSERT INTO avion  (marque,typee,capacite) VALUES (:marque,:typee,:capacite)');
+      $stmt=DB::connect()->prepare('INSERT INTO avion  (marque,typee) VALUES (:marque,:typee)');
       $stmt->bindParam(':marque',$data['marque']);
       $stmt->bindParam(':typee',$data['typee']);
-      $stmt->bindParam(':capacite',$data['capacite']);
+      // $stmt->bindParam(':capacite',$data['capacite']);
       if($stmt->execute()){
        return 'ok';
     }else{
@@ -62,11 +62,11 @@ class AvionModels{
    }
 
    static public function update ($data){
-      $stmt=DB::connect()->prepare('update  avion set marque=:marque ,typee=:typee ,capacite=:capacite where id_avion=:id_avion');
+      $stmt=DB::connect()->prepare('update  avion set marque=:marque ,typee=:typee where id_avion=:id_avion');
       $stmt->bindParam(':id_avion',$data['id_avion']);
       $stmt->bindParam(':marque',$data['marque']);
       $stmt->bindParam(':typee',$data['typee']);
-      $stmt->bindParam(':capacite',$data['capacite']);
+      // $stmt->bindParam(':capacite',$data['capacite']);
 
       if($stmt->execute()){
        return 'ok';
@@ -81,7 +81,7 @@ class AvionModels{
    static public function delete($data){
       $id_avion=$data['id_avion'];
       try{
-         $query='Delete from avion where id_avion=:id_avion';
+         $query='DELETE FROM avion WHERE id_avion=:id_avion';
          $stmt=DB::connect()->prepare($query);
          $stmt->execute((array(":id_avion"=>$id_avion)));
          if($stmt->execute()){

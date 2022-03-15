@@ -50,6 +50,8 @@ if((isset($_POST['inlineRadioOptions2']) && (isset($_POST['find'])))){
                                 <th scope="col" class="p-3 mb-2 bg-warning text-dark">HD</th>
                                 <th scope="col" class="p-3 mb-2 bg-secondary text-white">HA</th>
                                 <th scope="col" class="p-3 mb-2 bg-warning text-dark">Prix_vol</th>
+                                <th scope="col" class="p-3 mb-2 bg-secondary text-white">Seats</th>
+
 
 
 
@@ -69,6 +71,7 @@ if((isset($_POST['inlineRadioOptions2']) && (isset($_POST['find'])))){
                                     <td><?php echo ($vols['heure_depart']); ?></td>
                                     <td><?php echo ($vols['heure_arrivee']); ?></th>
                                     <td><?php echo ($vols['prix_vol']); ?></td>
+                                    <td><?php echo ($vols['available_seats']); ?></td>
                                 </tr>
                             <?php }; ?>
 

@@ -14,7 +14,7 @@ if (isset($_POST['find'])) {
 }
 
 ?>
-<body>
+<body class="img js-fullheight" style="background-image: url(../images/bg.jpg);">
   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <a class="navbar-brand"><img src="../img/IL MEGLIO.PNG"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,7 +81,7 @@ if (isset($_POST['find'])) {
                                        
                                         <th scope="col">Marque</th>
                                         <th scope="col">Type</th>
-                                        <th scope="col">Capacité</th>
+                                        <!-- <th scope="col">Capacité</th> -->
 
                                     </tr>
                                 </thead>
@@ -92,7 +92,7 @@ if (isset($_POST['find'])) {
                                        
                                         <td><?php echo ($avion['marque']); ?></td>
                                         <td><?php echo ($avion['typee']); ?></th>
-                                        <td><?php echo ($avion['capacite']); ?></td>
+                                        <!-- <td><?php echo ($avion['capacite']); ?></td> -->
 
                                         <td class="d-flex flex-row ">
 

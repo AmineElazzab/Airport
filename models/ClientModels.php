@@ -4,7 +4,7 @@ class ClientModels{
 
      static public function getAll() {
 
-        $stmt = DB::connect()->prepare('SELECT * from client');
+        $stmt = DB::connect()->prepare('SELECT * FROM client');
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->null;
@@ -16,7 +16,7 @@ class ClientModels{
       $search=$data['search'];
       /*die (print_r($data));*/
       try{
-         $query='select* from client where nom like ?  OR cin like ? OR prenom like ?' ;
+         $query='SELECT* FROM client WHERE nom LIKE ?  OR cin LIKE ? OR prenom LIKE ?' ;
          $stmt=DB::connect()->prepare($query);
          $stmt->execute((array('%'.$search.'%', '%'.$search.'%', '%'.$search.'%')));
          $client=$stmt->fetchAll();
@@ -53,7 +53,7 @@ class ClientModels{
    static public function getClient($data){
       $id_client=$data['id_client'];
       try{
-          $query='select * from client where id_client=:id_client';
+          $query='SELECT * FROM client WHERE id_client=:id_client';
           $stmt=DB::connect()->prepare($query);
           $stmt->execute((array(":id_client"=>$id_client)));
           $client=$stmt->fetch(PDO::FETCH_OBJ);
@@ -66,7 +66,7 @@ class ClientModels{
    }
 
    static public function update ($data){
-      $stmt=DB::connect()->prepare('update  client set nom=:nom ,prenom=:prenom ,cin=:cin ,telephone=:telephone ,email=:email ,adresse=:adresse,passwords=:passwords where id_client=:id_client');
+      $stmt=DB::connect()->prepare('UPDATE  client SET nom=:nom ,prenom=:prenom ,cin=:cin ,telephone=:telephone ,email=:email ,adresse=:adresse,passwords=:passwords WHERE id_client=:id_client');
       $stmt->bindParam(':id_client',$data['id_client']);
       $stmt->bindParam(':nom',$data['nom']);
       $stmt->bindParam(':prenom',$data['prenom']);
@@ -89,7 +89,7 @@ class ClientModels{
    static public function delete($data){
       $id_client=$data['id_client'];
       try{
-         $query='Delete from client where id_client=:id_client';
+         $query='DELETE FROM client WHERE id_client=:id_client';
          $stmt=DB::connect()->prepare($query);
          $stmt->execute((array(":id_client"=>$id_client)));
          if($stmt->execute()){

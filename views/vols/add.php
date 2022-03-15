@@ -59,6 +59,10 @@ if (isset($_POST['submit'])) {
                                 <label for="prix_vol" class="text-warning">prix_vol:</label><br>
                                 <input type="text" name="prix_vol" id="prix_vol" class="form-control">
                             </div>
+                            <div class="form-group">
+                                <label for="seats" class="text-warning">seats:</label><br>
+                                <input type="text" name="seats" id="seats" class="form-control">
+                            </div>
                            
                             <div class="form-group">
                                 <label for="id_avion" class="text-warning">id_avion :</label><br>

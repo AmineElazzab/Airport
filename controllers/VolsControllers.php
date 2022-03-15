@@ -33,6 +33,8 @@ class VolsControllers{
               'heure_depart'=>$_POST['heure_depart'],
               'heure_arrivee'=>$_POST['heure_arrivee'],
               'prix_vol'=>$_POST['prix_vol'],
+              'seats'=>$_POST['seats'],
+              'id_avion'=>$_POST['id_avion'],
               
             
               
@@ -75,6 +77,8 @@ class VolsControllers{
           'heure_depart'=>$_POST['heure_depart'],
           'heure_arrivee'=>$_POST['heure_arrivee'],
           'prix_vol'=>$_POST['prix_vol'],
+          'seats'=>$_POST['seats'],
+          'id_avion'=>$_POST['id_avion'],
           
          
         );

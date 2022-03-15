@@ -16,7 +16,7 @@ if (isset($_POST['find'])) {
 
 ?>
 
-<body id="body-pd">
+<body class="img js-fullheight" style="background-image: url(../images/bg.jpg);">
 <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <!-- <a class="navbar-brand" href="#"><h1>IL MEGLIO.</h1></a> -->
   <a class="navbar-brand"><img src="../img/IL MEGLIO.PNG"></a>

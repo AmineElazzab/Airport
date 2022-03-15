@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 require_once './views/includes/header.php';
 require_once  './autoload.php';
 require_once './controllers/HomeControllers.php';
@@ -16,7 +17,7 @@ $pages=['index/index','index/vols','avion/avion','avion/Dashboard','avion/update
 
 
 
-// if (isset($_SESSION['logged']) && ($_SESSION['logged'])=== true ){
+
 
 if(isset($_GET['url'])){
 
@@ -42,4 +43,3 @@ else
     $home->index('index/index');
     require_once './views/includes/footer.php';
 }
-// }
