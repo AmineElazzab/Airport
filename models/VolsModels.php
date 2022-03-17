@@ -13,12 +13,12 @@ class VolsModels{
                       avion_vols.seats
                        -
                       (SELECT count(*) FROM reservation
-                                        WHERE reservation.id_vols = avion_vols.id_vols) as available_seats FROM avion_vols';
+                                        WHERE  reservation.id_vols = avion_vols.id_vols) as available_seats FROM avion_vols';
          $stmt = DB::connect()->prepare($query);
          if ($stmt->execute()) {
              return $stmt->fetchAll();
          }
-     } catch (PDOException $ex) {
+     }catch (PDOException $ex) {
          echo 'error' . $ex->getMessage();
      }
      }

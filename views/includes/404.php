@@ -1,17 +1,3 @@
-<!-- <div class="container">
-    <div class="row mt-4">
-        <div class="col-md-10 mx-auto">
-            <div class="card-body">
-                <div class="text-center p-5 rounded bg-secondary">
-                    <h2 class="text-white">
-                        Page introvable 404
-                    </h2>
-                    <a href="<?php echo BASE_URL?>" class="btn btn-outline-secondary text-white"> HOME</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corona Admin</title>
+    <title>IL-MEGLIO</title>
+    <link rel="shortcut icon" href="assets/images/logo1.png" />
     <!-- plugins:css -->
     <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">

@@ -105,16 +105,6 @@ class ReservationModels{
   
      }
 
-      
-    static public function imprimer($data) {
-      $id_reservation=$data['id_reservation'];
-      $stmt = DB::connect()->prepare('SELECT * from reservation,client,vols,passager,avion where avion.id_avion=vols.id_vols and reservation.id_client=client.id_client and reservation.id_vols=vols.id_vols and passager.id_client=client.id_client and reservation.id_reservation='.$id_reservation);
-      $stmt->execute();
-      $passager=$stmt->fetch(PDO::FETCH_OBJ);
-      return $passager;
-      $stmt->null;
-
-   }
 
 
 }

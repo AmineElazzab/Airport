@@ -15,6 +15,8 @@ if (isset($_POST['submit'])) {
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../assets/images/logo1.png" />
+
 
 </head>
 <body>
@@ -36,11 +38,9 @@ if (isset($_POST['submit'])) {
                         <form id="login-form" class="form" action="" method="post">
                             <h3 class="text-center text-warning">Login</h3>
                             <div class="form-group">
-                                <!-- <label for="cin" class="text-warning">CIN:</label><br> -->
                                 <input type="text" name="cin" id="cin" placeholder="CIN" required class="form-control">
                             </div>
                             <div class="form-group">
-                                <!-- <label for="password" class="text-warning">Password:</label><br> -->
                                 <input id="password-field" type="password" name="passwords" id="passwords" class="form-control" placeholder="Password" required>
                                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
@@ -59,14 +59,14 @@ if (isset($_POST['submit'])) {
 								</div>
 	            </div>
                 
-                            <div class="text-end">
+                            <div class="text-center">
                                 <a href="<?php echo BASE_URL; ?>client/add" class="text-warning">Register here</a>
                             </div>
                         </form>
-                        <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
-	          <div class="social d-flex text-center">
-	          	<a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
-	          	<a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
+                        <p class="w-100 text-center" >&mdash; Or Sign In With &mdash;</p>
+	          <div class="w-200 text-center">
+	          	<a href="#" class="btn btn-outline-dark btn-lg"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
+	          	<a href="#" class="btn btn-outline-primary btn-lg"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
 	          </div>
                     </div>
                 </div>

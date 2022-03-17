@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     function desactiver() {
 
         var radio = document.getElementById('inlineRadio2');
@@ -16,7 +16,7 @@
       }
 
     }
-</script>
+</script> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,26 +35,7 @@
 	<nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="index.php"><img src="img/IL MEGLIO.PNG"></a> 
-            <!-- <button class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button> -->
-			<!-- <div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link active" href="index.php">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="portfolio.php">Portfolio</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="pricing.php">Pricing</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="team.php">Team</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="./views/includes/footer.php">Contact Us</a>
-					</li>
-				</ul>
-			</div> -->
+            
 		</div>
 	</nav>
 	<!--- End Navigation -->
@@ -66,7 +47,7 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button> -->
+    
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -78,9 +59,7 @@
     <div class="carousel-item">
       <img src="img/bg5.jpg" class="d-block w-100" alt="...">
     </div>
-    <!-- <div class="carousel-item">
-      <img src="img/bg5.jpg" class="d-block w-100" alt="...">
-    </div> -->
+   
   </div>
 
   
@@ -93,9 +72,9 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-  <div class="carousel-caption justify-content-center bg-dark px-3  ">
+  <div class="carousel-caption justify-content-center   ">
                 <form method="post" action="index/vols">
-                <div>
+                <!-- <div>
 
 <div class="form-check form-check-inline"> 
     <input class="form-check-input" type="radio" onclick="desactiver()" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
@@ -106,14 +85,14 @@
     <label class="form-check-label" for="inlineRadio1">Aller-simple</label>
 </div>
 
-</div>
-                    <div class="row py-">
-                        <div class="col"><input type="text" name="search" class="form-control" placeholder="ville-départ" aria-label="Username" aria-describedby="basic-addon1"></div>
+</div> -->
+                    <!-- <div class="row py-"> -->
+                        <!-- <div class="col"><input type="text" name="search" class="form-control" placeholder="ville-départ" aria-label="Username" aria-describedby="basic-addon1"></div>
                         <div class="col"><input type="text" name="search1" class="form-control" placeholder="ville-arrivée" aria-label="Username" aria-describedby="basic-addon1"></div>
                         <div class="col"><input type="date" name="search2" class="form-control" placeholder="date-départ" aria-label="Username" aria-describedby="basic-addon1"></div>
-                        <div class="col"><input type="date" name="search3" id="search3" class="form-control" placeholder="date-retour" aria-label="Username" aria-describedby="basic-addon1"></div>
+                        <div class="col"><input type="date" name="search3" id="search3" class="form-control" placeholder="date-retour" aria-label="Username" aria-describedby="basic-addon1"></div> -->
                         <div class="col"><button type="submit" name="find" class="btn btn-success" >Rechercher des vols</button></div>
-                    </div>
+                    <!-- </div> -->
 
 
 

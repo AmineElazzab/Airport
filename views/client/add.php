@@ -17,6 +17,7 @@ if (isset($_POST['submit'])) {
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../assets/images/logo1.png" />
 </head>
 <body>
     
@@ -37,7 +38,7 @@ if (isset($_POST['submit'])) {
                             <h3 class="text-center text-warning">Register here</h3>
                             <div class="form-group">
                                 <!-- <label for="nom" class="text-warning">Nom:</label><br> -->
-                                <input type="text" name="nom" id="nom" placeholder="NOM" class="form-control">
+                                <input type="text" name="nom" id="nom" placeholder="Nom" class="form-control">
                             </div>
                             <div class="form-group">
                                 <!-- <label for="prenom" class="text-warning">Prenom:</label><br> -->
@@ -68,7 +69,9 @@ if (isset($_POST['submit'])) {
                                 <input type="submit" name="submit" class="btn btn-outline-warning btn-lg" value="submit">
 
                             </div>
-
+                            <div class="text-center">
+                                <a href="<?php echo BASE_URL; ?>client/login" class="text-warning">Login</a>
+                            </div>
                         </form>
                     </div>
                 </div>

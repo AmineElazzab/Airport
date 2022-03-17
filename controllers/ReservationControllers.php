@@ -87,7 +87,7 @@ class ReservationControllers{
             {
               session::set('success','Reservation Supprime avec success');
              /* header('location:'.BASE_URL);*/
-              Redirect::to('reservation');
+              Redirect::to('reserver');
     
             }else{
               
@@ -96,18 +96,6 @@ class ReservationControllers{
         }
       }
 
-
-      public function imprimer(){
-
-        if(isset($_POST['id_reservation'])){
-            $data['id_reservation']=$_POST['id_reservation'];
-            // die(print_r($data['id_reservation']));
-            $result=ReservationModels::imprimer($data);
-            // die(print_r($result));
-            return $result;
-           
-        }
-      }
     
 
 

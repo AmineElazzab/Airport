@@ -12,31 +12,49 @@ if (isset($_POST['find'])) {
 } else {
 
     $data = new ReservationControllers();
-    $reservation = $data->getReservation();
+    $reservation = $data->getAllReservation();
 }
 
 ?>
-
-<body class="img js-fullheight" style="background-image: url(../images/bg.jpg);">
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-  <!-- <a class="navbar-brand" href="#"><h1>IL MEGLIO.</h1></a> -->
-  <a class="navbar-brand"><img src="../img/IL MEGLIO.PNG"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
-    <ul class="nav nav-tabs">
-      <li class="nav-item active">
-      <a href="<?php echo BASE_URL; ?>reservation/vols" class="nav-link"><p class="text-warning">Vols</p></a>
-      </li>
-      <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="<?php echo BASE_URL; ?>reservation/reserver" class="nav-link"><p class="text-warning">Réservation</p></a>
-      </li>
-      </ul>
-  </div>
-      <div class="text-light">  <?php  echo $_SESSION['nom']."    ".$_SESSION['prenom'] ;?> </div>
-  <a href="<?php echo BASE_URL; ?>logout/logout" title="Déconnexion">SignOut</a>
+<head>
+    <link rel="shortcut icon" href="../assets/images/logo1.png" />
+</head>
+<body class="" style="background-image: url(../images/bg.jpg);">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand">
+            <img src="../img/IL MEGLIO.PNG" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form method="post" class="me-3">
+                
+            </form>
+            <ul class="navbar-nav me-auto mb-auto mb-lg-auto">
+            <li class="nav-item">
+                <a href="<?php echo BASE_URL; ?>reservation/vols" class="nav-link"><p class="text-warning">Vols</p></a>
+             </li>
+            <li class="nav-item active">
+                <a class="nav-link active" aria-current="page" href="#"><p class="text-warning">Réservation</p></a>
+             </li>
+            </ul>
+            <ul class="navbar-nav d-flex flex-row ms-auto me-3">
+                <li class="nav-item">
+                    <a class="nav-link" href=""><?php  echo $_SESSION['nom']."    ".$_SESSION['prenom'] ;?></a>
+                </li>
+                <li class="nav-item me-3 me-lg-0 dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/YouCodeSchool.png"  width="32" height="32" class="rounded-circle" >
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown1">
+                        <li><a class="dropdown-item" href="<?php echo BASE_URL ?>logout/logout">LogOut</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
            
         
@@ -51,6 +69,7 @@ if (isset($_POST['find'])) {
                 <?php include('./views/includes/alert.php'); ?>
                 <div class="card">
                     <div class=" car-body  bg-light p-4">
+                    <div class="table-responsive">
                         <form class="float-end d-flex flex-row" method="post">
                             <input type="text" name="search" placeholder="search">
                             <button class="btn btn-warning btn-sm" name="find">
@@ -84,19 +103,21 @@ if (isset($_POST['find'])) {
                                         <td><?php echo ($reservation['ville_arrivee']); ?></td>
 
 
+                                 <td class="d-flex flex-row ">
 
-                                        <!-- <td class="d-flex flex-row ">
+                                
 
-                                            <form method="post" class="mx-4" action="imprimer">
+                                <form method="post" class="mx-0" action="delete">
 
-                                                <input type="hidden" name="id_reservation" value="<?php echo ($reservation['id_reservation']); ?>">
-                                                <button class="btn btn-sm btn-warning">Imprimer</button>
+                                    <input type="hidden" name="id_reservation" value="<?php echo ($reservation['id_reservation']); ?>">
+                                    <button class="btn btn-sm btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                                        </svg></button>
 
-                                            </form>
+                                </form>
 
-
-
-                                        </td> -->
+                                </td>
+                                       
 
                                     </tr>
 
@@ -105,15 +126,16 @@ if (isset($_POST['find'])) {
                             </tbody>
                         </table>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="../ass/js/sidebar.js"></script>
 </body>
 

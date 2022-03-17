@@ -13,7 +13,7 @@ class ClientControllers{
         if(isset($_POST['search'])){
           $data=array('search' => $_POST['search']);
         }
-        $client=ClientModels::searchClient($data);
+        $client=ClientModels::searchClient($data); // :: 
         return $client;
   
       }
@@ -25,8 +25,7 @@ class ClientControllers{
             $options=[
                 'cost'=>12//augmenter le "cost" par défaut pour BCRYPT par défaut 60
             ];
-            $password=password_hash($_POST['passwords'],
-            PASSWORD_BCRYPT,$options);
+            $password=password_hash($_POST['passwords'],PASSWORD_BCRYPT,$options);
             //créer une clé de hachage standard.
             $data=array(
   
@@ -44,7 +43,7 @@ class ClientControllers{
   
             if($result==='ok'){
               session::set('success','Client Ajouté avec success');
-              Redirect::to('reservation/vols');
+              Redirect::to('../reservation/vols');
             }else{
                 echo $result;
             }
@@ -62,35 +61,7 @@ class ClientControllers{
      return $client;
   }
 
-  public function updateClient(){
-    if(isset($_POST['submit'])){
-        $options=[
-            'cost'=>12
-        ];
-        $password=password_hash($_POST['passwords'],
-        PASSWORD_BCRYPT,$options);
-        $data=array(
-          'id_client'=>$_POST['id_client'],
-          'nom'=>$_POST['nom'],
-          'prenom'=>$_POST['prenom'],
-          'cin'=>$_POST['cin'],
-          'telephone'=>$_POST['telephone'],
-          'email'=>$_POST['email'],
-          'adresse'=>$_POST['adresse'],
-          'passwords'=>$password
-         
-        );
-        
-        $result=ClientModels::update($data);
-
-        if($result==='ok'){
-          session::set('success','Client Modifier avec success');
-          Redirect::to('client');
-        }else{
-            echo $result;
-        }
-    }
-  }
+  
 
   public function deleteClient(){
 

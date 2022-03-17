@@ -21,7 +21,9 @@ if (isset($_POST['submit'])) {
 
 
 ?>
-
+<head>
+    <link rel="shortcut icon" href="../assets/images/logo1.png" />
+</head>
 <body class="bg-dark">
     <div>
         <a href="<?php echo BASE_URL; ?>avion/avion"> <button class="btn btn-sm btn-info"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
