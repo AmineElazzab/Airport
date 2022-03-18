@@ -96,7 +96,7 @@ if (isset($_POST['find'])) {
                                        
                                         <th scope="col">Marque</th>
                                         <th scope="col">Type</th>
-                                        <!-- <th scope="col">Capacité</th> -->
+                                        <th scope="col">Capacité</th>
 
                                     </tr>
                                 </thead>
@@ -107,7 +107,7 @@ if (isset($_POST['find'])) {
                                        
                                         <td><?php echo ($avion['marque']); ?></td>
                                         <td><?php echo ($avion['typee']); ?></th>
-                                        <!-- <td><?php echo ($avion['capacite']); ?></td> -->
+                                        <td><?php echo ($avion['capacite']); ?></td>
 
                                         <td class="d-flex flex-row ">
 

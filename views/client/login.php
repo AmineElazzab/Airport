@@ -19,9 +19,6 @@ if (isset($_POST['submit'])) {
 
 
 </head>
-<body>
-    
-</body>
 </html>
 <body class="img js-fullheight" style="background-image: url(../images/bg.jpg);">
     <div>

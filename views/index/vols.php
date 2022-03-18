@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
 
 ?>
 
-<body class="bg-dark">
+<body class="" style="background-image: url(../images/bg1.jpg);">
 
 
 

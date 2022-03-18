@@ -38,31 +38,31 @@ if (isset($_POST['submit'])) {
                             <h3 class="text-center text-warning">Register here</h3>
                             <div class="form-group">
                                 <!-- <label for="nom" class="text-warning">Nom:</label><br> -->
-                                <input type="text" name="nom" id="nom" placeholder="Nom" class="form-control">
+                                <input type="text" name="nom" id="nom" placeholder="Nom" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <!-- <label for="prenom" class="text-warning">Prenom:</label><br> -->
-                                <input type="text" name="prenom" id="prenom" placeholder="Prenom" class="form-control">
+                                <input type="text" name="prenom" id="prenom" placeholder="Prenom" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <!-- <label for="cin" class="text-warning">Cin:</label><br> -->
-                                <input type="text" name="cin" id="cin" placeholder="Cin" class="form-control">
+                                <input type="text" name="cin" id="cin" placeholder="Cin" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <!-- <label for="telephone" class="text-warning">Telephone:</label><br> -->
-                                <input type="text" name="telephone" id="telephone" placeholder="Telephone" class="form-control">
+                                <input type="text" name="telephone" id="telephone" placeholder="Telephone" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <!-- <label for="email" class="text-warning">Email:</label><br> -->
-                                <input type="text" name="email" id="email" placeholder="Email" class="form-control">
+                                <input type="text" name="email" id="email" placeholder="Email" class="form-control" required>
                             </div>
                             <div class="form-group">
                                 <!-- <label for="adresse" class="text-warning">Adresse:</label><br> -->
-                                <input type="text" name="adresse" id="adresse" placeholder="Adresse" class="form-control">
+                                <input type="text" name="adresse" id="adresse" placeholder="Adresse" class="form-control" required>
                             </div>
                             <div class="form-group ">
                             <!-- <label for="Passwords" class="text-warning">Passwords</label> -->
-                            <input id="password-field" type="password" class="form-control" name="passwords" placeholder="Pseudo">
+                            <input id="password-field" type="password" class="form-control" name="passwords" placeholder="Pseudo" required>
                             <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                         </div>
                             <div class="row p-5">

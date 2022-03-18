@@ -28,9 +28,9 @@ class VolsModels{
       $search=$data['search'];
       /*die (print_r($data));*/
       try{
-         $query='select* from vols where date_depart like ?  OR date_arrivee like ? OR ville_depart like ? OR ville_arrivee like ? OR airoport_depart like ? OR airoport_arrivee like ?';
+         $query='SELECT* FROM vols WHERE date_depart LIKE ?  OR date_arrivee LIKE ? OR ville_depart LIKE ? OR ville_arrivee LIKE ? OR airoport_depart LIKE ? OR airoport_arrivee LIKE? OR prix_vol LIKE?';
          $stmt=DB::connect()->prepare($query);
-         $stmt->execute((array('%'.$search.'%', '%'.$search.'%','%'.$search.'%', '%'.$search.'%','%'.$search.'%', '%'.$search.'%')));
+         $stmt->execute((array('%'.$search.'%', '%'.$search.'%','%'.$search.'%', '%'.$search.'%','%'.$search.'%', '%'.$search.'%' , '%'.$search.'%')));
          $vols=$stmt->fetchAll();
          return $vols;
 

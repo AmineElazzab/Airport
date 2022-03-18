@@ -41,7 +41,7 @@ if (isset($_POST['find'])) {
             <a href="<?php echo BASE_URL; ?>client/client" class="nav-link"><p class="text-warning">Client</p></a>
              </li>
              <li class="nav-item active">
-             <a class="nav-link active" aria-current="page" href="#"><p class="text-warning">Vlos</p></a>
+             <a class="nav-link active" aria-current="page" href="#"><p class="text-warning">Vols</p></a>
              </li>
              <li class="nav-item active">
              <a href="<?php echo BASE_URL; ?>reservation/reservation" class="nav-link"><p class="text-warning">Réservation</p></a>

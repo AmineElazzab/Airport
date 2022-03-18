@@ -1,4 +1,6 @@
 <?php
+error_reporting(0);
+
 
 if($_SESSION['role']==1){
     header("Location: http://localhost/me/airport/");
@@ -34,10 +36,10 @@ if (isset($_POST['find'])) {
             </form>
             <ul class="navbar-nav me-auto mb-auto mb-lg-auto">
             <li class="nav-item">
-                <a href="<?php echo BASE_URL; ?>reservation/vols" class="nav-link"><p class="text-warning">Vols</p></a>
+                <a href="<?php echo BASE_URL; ?>reservation/vols" class="nav-link"><p class="text-light">Vols</p></a>
              </li>
             <li class="nav-item active">
-                <a class="nav-link active" aria-current="page" href="#"><p class="text-warning">Réservation</p></a>
+                <a class="nav-link active" aria-current="page" href="#"><p class="text-light">Réservation</p></a>
              </li>
             </ul>
             <ul class="navbar-nav d-flex flex-row ms-auto me-3">

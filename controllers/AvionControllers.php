@@ -18,9 +18,11 @@ class AvionControllers{
   
       }
 
-      
+      // if(!empty($_POST['marque']) && !empty($_POST['typee']) && !empty($_POST['capacite']))
     public function addAvion(){
         if(isset($_POST['submit'])){
+          if(!empty($_POST['marque']) && !empty($_POST['typee']) && !empty($_POST['capacite']))
+          {
             $data=array(
   
               'marque'=>$_POST['marque'],
@@ -37,6 +39,12 @@ class AvionControllers{
             }else{
                 echo $result;
             }
+
+          }
+          else{
+            echo "<script>alert('Remplire tou les info');</script>";
+            // return "Remplire tou les info";
+          }
         }
       }
 

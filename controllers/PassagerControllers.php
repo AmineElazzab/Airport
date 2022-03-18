@@ -23,7 +23,6 @@ class PassagerControllers{
                         $data['prenom'.$i] = $_POST['prenom'.$i];
                         $data['date_naissance'.$i] = $_POST['date_naissance'.$i];
                         $data['id_client'] = $_POST['id_client'];
-                        // $data['client'.$i] = $_POST['client'.$i];
                        
                     }
                     
